@@ -44,7 +44,7 @@ function setTheme(theme) {
     ? '<span aria-hidden="true">☀</span><span>Modo claro</span>'
     : '<span aria-hidden="true">☾</span><span>Modo oscuro</span>';
   themeToggle.setAttribute("aria-label", dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
-  try { localStorage.setItem(THEME_KEY, theme); } catch (error) { console.warn(error); }
+  try { localStorage.setItem(THEME_KEY, JSON.stringify(theme)); } catch (error) { console.warn(error); }
 }
 
 function updateFilterSummary() {
