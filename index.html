@@ -24,6 +24,7 @@
         <form class="search-control" id="searchForm" role="search"><label for="searchInput">Nombre</label><div class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Ej. Rick Sanchez" autocomplete="off"><button id="searchButton" type="submit">Buscar <span aria-hidden="true">↗</span></button></div></form>
         <div class="select-control"><label for="statusFilter">Estado</label><select id="statusFilter"><option value="">Todos los estados</option><option value="alive">Vivo</option><option value="dead">Muerto</option><option value="unknown">Desconocido</option></select></div>
         <div class="select-control"><label for="speciesFilter">Especie</label><select id="speciesFilter"><option value="">Todas las especies</option><option value="human">Humano</option><option value="alien">Alienígena</option><option value="humanoid">Humanoide</option><option value="animal">Animal</option><option value="mythological creature">Criatura mitológica</option><option value="unknown">Desconocida</option></select></div>
+        <div class="select-control"><label for="sortFilter">Orden</label><select id="sortFilter"><option value="api">Orden original</option><option value="az">Nombre: A-Z</option></select></div>
         <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false"><span class="heart-icon" aria-hidden="true">♡</span><span>Mis favoritos</span><b id="favoriteButtonCount">0</b></button>
       </div>
       <div class="results-toolbar"><span class="active-filter-label" id="activeFilters">Mostrando personajes del universo</span><button class="clear-button" id="clearFilters" type="button">Restablecer</button></div>
@@ -34,4 +35,5 @@
   </main>
   <footer class="site-footer"><span class="footer-brand">ATLAS R&amp;M <i>Multiverso, catalogado.</i></span><span>HTML · CSS · JavaScript · fetch()</span></footer>
 </body>
+
 </html>
