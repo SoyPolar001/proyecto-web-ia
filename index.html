@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explorador interactivo de personajes de Rick and Morty, conectado a la API pública.">
+  <title>Atlas R&amp;M — Explorador multiversal</title>
+  <link rel="preconnect" href="https://rickandmortyapi.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#personajes">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Atlas Rick and Morty, inicio"><span class="brand-symbol" aria-hidden="true">✦</span><span class="brand-copy"><span class="brand-name">ATLAS <b>R&amp;M</b></span><span class="brand-caption">EXPLORADOR MULTIVERSAL</span></span></a>
+    <div class="topbar-actions"><span class="live-label"><span class="live-dot" aria-hidden="true"></span> Datos en vivo</span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro"><span aria-hidden="true">☾</span><span>Modo oscuro</span></button></div>
+  </header>
+  <main class="page-shell" id="inicio">
+    <section class="hero" aria-labelledby="heroTitle"><div class="hero-copy"><p class="eyebrow"><span>01</span> / ARCHIVO DE DIMENSIONES</p><h1 id="heroTitle">Todos los universos,<br><em>un solo lugar.</em></h1><p class="hero-description">Explora personajes, revisa sus datos y guarda a tus favoritos. Cada ficha llega directamente desde el multiverso.</p></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-outer"><span class="orbit-dot orbit-dot-top"></span><span class="orbit-dot orbit-dot-bottom"></span></div><div class="orbit orbit-inner"><span class="portal-core">R<span>&amp;</span>M</span></div><span class="coordinate coordinate-top">C-137 / 01</span><span class="coordinate coordinate-bottom">COORDENADAS<br>DESCONOCIDAS</span><span class="hero-cross hero-cross-one">+</span><span class="hero-cross hero-cross-two">+</span></div></section>
+    <section class="stats-band" aria-label="Resumen de resultados"><div class="stats-intro"><span class="stats-pulse" aria-hidden="true"></span><span>REGISTRO EN VIVO</span></div><div class="stat-item"><strong id="resultCount">--</strong><span>resultados</span></div><div class="stat-item"><strong id="favoriteCount">0</strong><span>favoritos</span></div><div class="stat-item"><strong id="pageIndicator">--</strong><span>página</span></div></section>
+    <section class="explorer-section" id="personajes" aria-labelledby="charactersTitle">
+      <div class="section-heading"><div><p class="eyebrow">BUSCA EN EL ARCHIVO</p><h2 id="charactersTitle">Personajes</h2></div><p class="results-message" id="resultsMessage" aria-live="polite">Conectando con el multiverso...</p></div>
+      <div class="filter-panel">
+        <form class="search-control" id="searchForm" role="search"><label for="searchInput">Nombre</label><div class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Ej. Rick Sanchez" autocomplete="off"><button id="searchButton" type="submit">Buscar <span aria-hidden="true">↗</span></button></div></form>
+        <div class="select-control"><label for="statusFilter">Estado</label><select id="statusFilter"><option value="">Todos los estados</option><option value="alive">Vivo</option><option value="dead">Muerto</option><option value="unknown">Desconocido</option></select></div>
+        <div class="select-control"><label for="speciesFilter">Especie</label><select id="speciesFilter"><option value="">Todas las especies</option><option value="human">Humano</option><option value="alien">Alienígena</option><option value="humanoid">Humanoide</option><option value="animal">Animal</option><option value="mythological creature">Criatura mitológica</option><option value="unknown">Desconocida</option></select></div>
+        <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false"><span class="heart-icon" aria-hidden="true">♡</span><span>Mis favoritos</span><b id="favoriteButtonCount">0</b></button>
+      </div>
+      <div class="results-toolbar"><span class="active-filter-label" id="activeFilters">Mostrando personajes del universo</span><button class="clear-button" id="clearFilters" type="button">Restablecer</button></div>
+      <div class="character-grid" id="characterGrid" aria-live="polite" aria-busy="true"><div class="loading-card"><span class="loader" aria-hidden="true"></span><p>Abriendo portal interdimensional...</p></div></div>
+      <nav class="pagination" id="pagination" aria-label="Paginación de personajes"><button id="prevPage" type="button" aria-label="Ir a la página anterior">← Anterior</button><span id="pageLabel">Página 1</span><button id="nextPage" type="button" aria-label="Ir a la página siguiente">Siguiente →</button></nav>
+    </section>
+    <aside class="source-note"><span aria-hidden="true">ⓘ</span><p>Este explorador consulta la <a href="https://rickandmortyapi.com/documentation" target="_blank" rel="noreferrer">API de Rick and Morty</a>. Los datos requieren conexión a internet.</p></aside>
+  </main>
+  <footer class="site-footer"><span class="footer-brand">ATLAS R&amp;M <i>Multiverso, catalogado.</i></span><span>HTML · CSS · JavaScript · fetch()</span></footer>
+</body>
+</html>
