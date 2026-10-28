@@ -203,3 +203,5 @@ themeToggle.addEventListener("click", () => setTheme(document.documentElement.da
 setTheme(readSaved(THEME_KEY, "light") === "dark" ? "dark" : "light");
 updateFavoriteCount();
 loadCharacters();
+
+sortFilter.addEventListener("change", updateFilterSummary);
