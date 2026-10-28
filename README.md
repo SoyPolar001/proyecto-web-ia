@@ -57,6 +57,10 @@ Una búsqueda sin coincidencias devuelve una respuesta HTTP 404 en esta API; eso
 
 El tema claro/oscuro conserva la elección con la clave `atlas-rm-theme`. Los favoritos se almacenan con `atlas-rm-favorites`. La mejora de orden A–Z surgió del Issue #2 y se integró mediante la PR #3.
 
+## Aprendizaje
+
+Aprendí que la API separa los personajes (`results`) de los metadatos de paginación (`info`), que una búsqueda vacía es distinta de una falla de conexión y que conviene revisar qué formato se guarda y se lee en `localStorage`. Probar la interfaz en el navegador ayudó a encontrar y corregir el guardado del tema.
+
 ## Issues, PR y commits
 
 - Issue #1 propone añadir un botón para reintentar la consulta si falla la API.
